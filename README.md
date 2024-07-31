@@ -1,5 +1,3 @@
-Here is the updated README content with a detailed workflow explanation and a flowchart:
-
 # Building a Real-Time Data Pipeline with Kafka and PySpark
 
 ## Introduction
