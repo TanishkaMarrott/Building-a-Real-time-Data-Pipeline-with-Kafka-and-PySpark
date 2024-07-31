@@ -1,8 +1,10 @@
+Here is the updated README content with a detailed workflow explanation and a flowchart:
+
 # Building a Real-Time Data Pipeline with Kafka and PySpark
 
 ## Introduction
 
-Welcome to my journey of building a real-time data pipeline using Apache Kafka and PySpark! 
+Welcome to my journey of building a real-time data pipeline using Apache Kafka and PySpark!
 
 This project is a hands-on experience designed to showcase how we can leverage these powerful technologies to process streaming data efficiently.
 
@@ -12,20 +14,46 @@ In this project, we'll set up a real-time data pipeline on AWS, utilizing Apache
 
 ## Directory Structure
 ```
-│   README.md      
-│      
-├───scripts      
-│   └───kafka_setup.sh         
-│   └───pyspark_job.py      
-│      
-├───terraform      
-│   └───main.tf      
-│   └───variables.tf      
-│   └───outputs.tf      
-│      
-└───config      
-    └───server.properties
+real-time-data-pipeline/
+├── kafka/
+│   ├── producer.py
+│   └── consumer.py
+├── pyspark/
+│   ├── spark_processing.py
+│   └── requirements.txt
+├── aws/
+│   ├── setup_msk_cluster.sh
+│   ├── deploy_lambda.sh
+│   └── create_s3_bucket.sh
+├── terraform/
+│   ├── main.tf
+│   ├── variables.tf
+│   └── outputs.tf
+├── README.md
+└── LICENSE
 ```
+
+## Workflow
+
+The following flowchart illustrates the workflow of our real-time data pipeline:
+
+```mermaid
+graph TD;
+    A[Kafka Producer] -->|Send Data| B[Kafka Topic];
+    B --> C[Kafka Consumer];
+    C -->|Ingest Data| D[PySpark Processing];
+    D -->|Store Processed Data| E[S3 Bucket];
+    D -->|Real-time Analytics| F[Dashboard];
+```
+
+### Workflow Steps:
+
+1. **Kafka Producer**: Produces data and sends it to the Kafka topic.
+2. **Kafka Topic**: Acts as a buffer and stores the data temporarily.
+3. **Kafka Consumer**: Consumes data from the Kafka topic and ingests it into PySpark.
+4. **PySpark Processing**: Processes the ingested data, performs transformations, and analytics.
+5. **Data Storage**: Stores the processed data in an S3 bucket for further use.
+6. **Real-time Analytics**: Data can be visualized on a real-time dashboard.
 
 ## Why This Project?
 
