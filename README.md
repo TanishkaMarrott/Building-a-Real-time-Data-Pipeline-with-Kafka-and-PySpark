@@ -10,6 +10,23 @@ This project is a hands-on experience designed to showcase how we can leverage t
 
 In this project, we'll set up a real-time data pipeline on AWS, utilizing Apache Kafka for streaming data ingestion and PySpark for processing. Our goal is to create a robust, scalable solution capable of handling large volumes of data with low latency.
 
+## Directory Structure
+```
+│   README.md      
+│      
+├───scripts      
+│   └───kafka_setup.sh         
+│   └───pyspark_job.py      
+│      
+├───terraform      
+│   └───main.tf      
+│   └───variables.tf      
+│   └───outputs.tf      
+│      
+└───config      
+    └───server.properties
+```
+
 ## Why This Project?
 
 I embarked on this project to deepen my understanding of real-time data processing and explore the practical applications of Kafka and PySpark. This project is an excellent opportunity to learn how to set up, configure, and integrate these tools to build a functional data pipeline.
